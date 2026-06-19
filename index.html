@@ -478,20 +478,25 @@
             opacity: 0.9;
         }
         
-        .cta-button-group {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 24px;
-        }
-        
-        @media (max-width: 700px) {
-            .authority-grid {
-                grid-template-columns: 1fr !important;
-                gap: 32px !important;
-            }
-        }
+       .cta-button-group {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+    .cta-button-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .cta-button-group button {
+        width: 100%;
+        display: block;
+    }
+}
         
         /* ========== FAQ ========== */
         .faq-item {
@@ -572,10 +577,10 @@
         <div class="container">
             <!-- VÍDEO CENTRALIZADO -->
             <div style="max-width: 800px; margin: 0 auto 40px; text-align: center;">
-                <video width="100%" height="auto" controls style="border-radius: 12px; box-shadow: 0 16px 48px rgba(30, 64, 175, 0.15);">
-                    <source src="LP_cpfcnpj.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeo HTML5.
-                </video>
+                <video width="100%" height="auto" controls autoplay muted playsinline style="border-radius: 12px; box-shadow: 0 16px 48px rgba(30, 64, 175, 0.15);">
+    <source src="LP_cpfcnpj.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo HTML5.
+</video>
             </div>
 
             <!-- BIO ABAIXO DO VÍDEO -->
